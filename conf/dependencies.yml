@@ -1,0 +1,11 @@
+# Application dependencies
+
+require:
+  - play [1.5,)
+  - io.github.bit-man -> javagit 0.2.0
+  - com.google.guava -> guava 30.0-jre:
+      exclude:
+        - com.google.code.findbugs -> *
+        - javax.inject -> javax.inject *
+  - net.andreinc -> mockneat 0.4.7
+  - com.stripe -> stripe-java 20.51.0

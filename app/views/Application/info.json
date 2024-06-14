@@ -1,0 +1,18 @@
+{
+  "applicationName": "${applicationName}",
+  "attachmentsPath": "${attachmentsPath}",
+  "release": "${release}",
+  "version": "${apiVersion}",
+  "javaVersion": "${javaVersion}",
+  "javaVendor": "${javaVendor}",
+  "frameworkVersion": "${frameworkVersion}",
+  "serverSHA": "${serverSHA}",
+  "currentSHA": "${currentSHA}",
+  "lastUpdated": "${lastUpdated}",
+  "url": "${url}",
+  "env": "${env}",
+  "envType": "${envType}",
+  "logLevel": "${logLevel}",
+  "logFile": "${logFile}",
+  "service": "${service}"
+}

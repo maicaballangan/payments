@@ -1,0 +1,15 @@
+{
+    "code": ${e.getCode()},
+    "category": "${e.getCategory()}"
+    #{if e.hasMessage()}
+    ,"message": "${e.getMessage()}"
+    #{/if}
+    #{if e.hasErrors()}
+    ,"errors": [
+      #{list items:e.getErrors(), as:'error'}
+        ${error.toString().raw()}
+         ${error_isLast ?'':',' }
+      #{/list}
+    ]
+    #{/if}
+}

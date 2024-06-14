@@ -1,0 +1,55 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Application
+GET            /ping                   Application.ping                        # Anonymous - Used for availability checking
+GET            /heartbeat              Application.heartbeat                   # Anonymous - Used for checking uptime
+
+# API Docs
+GET            /                       Application.index                       # Anonymous - home page
+GET            /resources.json         Application.resources                   # Anonymous - resources
+GET            /resources/{api}        Application.resource                    # Anonymous - resource
+
+# API Info
+GET            /info                   Application.info                                # Anonymous - API information # Anonymous - contact us
+GET            /test                   Application.test                                # Anonymous - API information # Anonymous - contact us
+
+# Home page
+GET            /                       Application.index
+
+# Ignore favicon requests
+GET            /favicon.ico                            404
+
+### START OF RESOURCES ###
+
+# Customers
+POST           /customers              Customers.create
+GET            /customers              Customers.getAll
+GET            /customers/{id}         Customers.get
+
+# Payments
+POST           /transactions           Transactions.create
+GET            /transactions/{id}      Transactions.get
+
+# Webhooks
+POST           /webhooks               Webhooks.create
+
+### END OF RESOURCES ###
+
+# Ignore favicon requests
+GET            /favicon.png            staticFile:/public/images/favicon-32        x32.png
+GET            /favicon.ico            staticFile:/public/images/favicon.ico
+
+# Map static resources from the /app/public folder to the /public path
+GET            /public/                staticDir:        public
+
+# CORS
+OPTIONS        /transactions           APIHelpers.options
+OPTIONS        /transactions/{id}      APIHelpers.options
+OPTIONS        /customers              APIHelpers.options
+OPTIONS        /customers/{id}         APIHelpers.options
+OPTIONS        /webhooks               APIHelpers.options
+
+# Catch all
+*       /.*                            Application.notFound

@@ -1,0 +1,94 @@
+{
+  "apiVersion": "${controllers.Application.API_VERSION}",
+  "swaggerVersion": "1.2",
+  "basePath": "${controllers.Application.BASE_URL_SCHEME}",
+  "apis": [
+    {
+      "path": "/resources/users",
+      "description": "User management"
+    },
+    {
+      "path": "/resources/roles",
+      "description": "Role management"
+    },
+    {
+      "path": "/resources/sessions",
+      "description": "Session management"
+    },
+    {
+      "path": "/resources/codes",
+      "description": "Country Codes management"
+    },
+    {
+      "path": "/resources/jobs",
+      "description": "Job management"
+    },
+    {
+      "path": "/resources/search",
+      "description": "Search management"
+    },
+    {
+      "path": "/resources/reports",
+      "description": "Report management"
+    },
+    {
+      "path": "/resources/categories",
+      "description": "Category management"
+    },
+    {
+      "path": "/resources/wishlists",
+      "description": "Wishlist management"
+    },
+    {
+      "path": "/resources/carts",
+      "description": "Cart management"
+    },
+    {
+      "path": "/resources/testimonials",
+      "description": "Testimonial management"
+    },
+    {
+      "path": "/resources/orders",
+      "description": "Order management"
+    },
+    {
+      "path": "/resources/customers",
+      "description": "Customer management"
+    },
+    {
+      "path": "/resources/coupons",
+      "description": "Coupon management"
+    },
+    {
+      "path": "/resources/courses",
+      "description": "Course management"
+    },
+    {
+      "path": "/resources/intakes",
+      "description": "Intake management"
+    },
+    {
+      "path": "/resources/attendances",
+      "description": "Attendance management"
+    },
+    {
+      "path": "/resources/trainers",
+      "description": "Trainer management"
+    },
+    {
+      "path": "/resources/feedback",
+      "description": "Feedback management"
+    }
+  ],
+  "authorizations": {
+    "apiKey": {
+      "type": "apiKey",
+      "passAs": "header",
+      "keyname": "api-key"
+    }
+  },
+  "info": {
+    "title": "${constants.APIConstants.APPLICATION_NAME.toUpperCase()} ${play.Play.id.toUpperCase()}",
+    "description": "To access restricted resources, you must have an active user account with the appropriate permissions. \n  You can then enter the api-key you receive into the field above."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "hasMore": ${hasMore},
+  "results": [
+#{list items:results, as:'result'}
+${result.toString().raw()}
+${result_isLast ?'':',' }
+#{/list}
+  ]
+}
